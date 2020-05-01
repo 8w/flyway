@@ -1,2 +1,1 @@
-/usr/share/flyway-commandline/flyway /usr/bin/flyway
-git stat
+/usr/share/flyway/flyway /usr/bin/flyway

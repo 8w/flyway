@@ -22,5 +22,5 @@ target
 # debian packaging temporary files
 flyway-commandline/built/
 flyway-commandline/debian/.debhelper/
-flyway-commandline/debian/flyway-commandline/
-/flyway-commandline_*
+flyway-commandline/debian/flyway/
+/flyway_*

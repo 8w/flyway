@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
-INSTALL_DIR=$$(pwd)/debian/flyway-commandline/usr/share/flyway
-CONFIG_DIR=$$(pwd)/debian/flyway-commandline/etc/flyway/sample-project
+INSTALL_DIR=$$(pwd)/debian/flyway/usr/share/flyway
+CONFIG_DIR=$$(pwd)/debian/flyway/etc/flyway/sample-project
 BUILD_DIR=built
 
 override_dh_auto_build:
