@@ -1,0 +1,15 @@
+Source: flyway-commandline
+Section: misc
+Priority: optional
+Maintainer: James Fellows <mrfellows@gmail.com>
+Build-Depends: debhelper (>= 8.0.0), maven, openjdk-11-jdk-headless
+Standards-Version: 3.9.3
+Homepage: https://flywaydb.org/
+
+Package: flyway-commandline
+Replaces: flyway
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, default-jre-headless
+Description: Version control for your database.
+ Robust schema evolution across all your environments.
+ With ease, pleasure and plain SQL.

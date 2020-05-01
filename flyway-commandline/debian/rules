@@ -1,0 +1,29 @@
+#!/usr/bin/make -f
+
+INSTALL_DIR=$$(pwd)/debian/flyway-commandline/usr/share/flyway
+CONFIG_DIR=$$(pwd)/debian/flyway-commandline/etc/flyway/sample-project
+BUILD_DIR=built
+
+override_dh_auto_build:
+	# refresh the license file in case it's been updated
+	cp built/licenses/flyway-community.txt debian/copyright
+
+override_dh_auto_clean:
+
+override_dh_auto_install:
+	# copy the files over to the install directory
+	mkdir -p $(INSTALL_DIR)
+	cp -R $(BUILD_DIR)/* $(INSTALL_DIR)
+	# remove things we don't need to slim-down the package
+	find $(INSTALL_DIR)/drivers -type f -not -name 'mysql*' -delete
+	rm -rf $(INSTALL_DIR)/jre
+
+	# move the config files
+	mkdir -p $(CONFIG_DIR)
+	mv $(INSTALL_DIR)/conf/flyway.conf $(CONFIG_DIR)
+	rm -rf $(INSTALL_DIR)/conf
+	mkdir -p $(CONFIG_DIR)/sql
+	mv $(INSTALL_DIR)/sql/* $(CONFIG_DIR)/sql
+
+%:
+	dh $@

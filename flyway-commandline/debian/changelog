@@ -1,0 +1,5 @@
+flyway-commandline (6.4.1) all; urgency=medium
+
+  * Initial release. 
+
+ -- James Fellows <mrfellows@gmail.com>  Thu, 30 Apr 2020 20:23:57 +0100

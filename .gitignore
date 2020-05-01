@@ -18,3 +18,9 @@ target
 !**/.idea/runConfigurations/*
 !**/.idea/codeStyles/
 !**/.idea/codeStyles/*
+
+# debian packaging temporary files
+flyway-commandline/built/
+flyway-commandline/debian/.debhelper/
+flyway-commandline/debian/flyway-commandline/
+/flyway-commandline_*
