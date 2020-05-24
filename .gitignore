@@ -23,4 +23,4 @@ target
 flyway-commandline/built/
 flyway-commandline/debian/.debhelper/
 flyway-commandline/debian/flyway/
-/flyway_*
+/flyway_*.deb
