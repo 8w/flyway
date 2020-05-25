@@ -1,2 +1,2 @@
-misc:Depends=default-jre-headless
+misc:Depends=
 misc:Pre-Depends=
