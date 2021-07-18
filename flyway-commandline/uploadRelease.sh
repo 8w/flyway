@@ -35,7 +35,7 @@ BUILD_VERSION=$(dpkg-deb -f "${DEB_FILE}" Version)
 
 echo "Uploading ${DEB_FILE} (version ${BUILD_VERSION}) to repo"
 
-deb-s3 upload \
+dpkg-s3 upload \
 	--bucket='private-repo-8w' \
 	--codename="${CODENAME}" \
 	--s3-region="eu-west-1" \
